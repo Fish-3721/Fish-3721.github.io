@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'Glina Script';
+  /* Путь к обычному начертанию. Если переименуешь файл в Glina-Regular.otf, не забудь поменять здесь */
+  src: url('fonts/Glina-Script-em._0.otf') format('opentype'); 
+  font-weight: normal; /* 400 */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Glina Script';
+  /* Путь к тонкому начертанию (Thin) */
+  src: url('fonts/Glina-Script-em.-Thin_0.otf') format('opentype');
+  font-weight: 300; 
+  font-style: normal;
+}
+
+/* =========================================
+   ОСНОВНЫЕ СТИЛИ
+   ========================================= */
+body {
+  font-family: "Glina Script", sans-serif; /* Добавил sans-serif как запасной */
+  background-color: #f6f8fa;
+  color: #24292f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0; /* Важно: убирает стандартные отступы браузера по краям */
+}
+
+.header {
+  margin: 40px 0;
+  display: flex;             
+  flex-direction: column;    
+  align-items: center;       
+  text-align: center;        
+}
+
+.header__avatar {
+  border-radius: 50%;
+  width: 150px;              
+  height: 150px;             
+  object-fit: cover;         
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Бонус: добавил легкую тень для аватарки */
+}
+
+.header__title {
+  margin: 20px 0 10px 0;     
+  font-size: 36px;           /* Немного увеличил размер для рукописного шрифта */
+  line-height: 1.2;
+  font-family: 'Glina Script', "Helvetica Neue", cursive; /* ПРИМЕНИЛИ ТВОЙ ШРИФТ */
+  font-weight: normal;       /* Если хочешь тонкий вариант, поменяй на 300 */
+}
+
+.header__subtitle {
+  color: #57606a;            
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.links {
+  width: 320px;
+  margin-bottom: 40px;
+}
+
+.links__header {
+  font-family: "Glina Script", sans-serif;
+  font-size: 24px;
+  line-height: 1.4;
+  margin: 0 0 15px 0;
+}
+
+.links__container {
+  background-color: #fff;
+  list-style-type: none;
+  border: 1px solid hsla(210, 18%, 87%, 1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 20px 10px;
+  gap: 10px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.links__link,
+.links__title {
+  font-size: 14px;
+  line-height: 1.4; /* ИСПРАВЛЕНО: было font-size: 1.4, что вызывало ошибку */
+  color: #57606a;
+}
+
+.links__link {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px 0px 10px;
+  gap: 30px;
+  border-bottom: 1px solid hsla(210, 18%, 87%, 1);
+  width: 280px;
+}
+
+.links__link:last-child {
+  border-bottom: none;
+}
+
+/* ИСПРАВЛЕНО: убрал опечатку linsk__link */
+.links__link,
+.links__link:visited {
+  text-decoration: none;
+  color: #000000;
+}
+
+.links__title {
+  margin: 0;
+  min-width: 100px;
+}
+
+footer {
+  margin: 0 0 40px 0;
+}
+
+.button-link {
+  font-family: "Glina Script";
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 320px;
+  background: #fff;
+  border: 1px solid rgba(27, 31, 36, 0.15);
+  border-radius: 5px;
+  font-family: "Glina Script", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #3c6469;
+  text-decoration: none;
+  transition: all 0.3s ease; /* Бонус: плавное изменение цвета при наведении */
+}
+
+.button-link:hover {
+  background-color: #a78ac9;
+  color: #fff;
+  box-shadow: 0 1px 0 rgba(27, 31, 36, 0.1);
+}
